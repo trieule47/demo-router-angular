@@ -1,0 +1,23 @@
+<p>
+  dynamic-component works!
+</p>
+<ng-template #container></ng-template>
+<button (click)="createComponent()">Create component</button>
+<button (click)="destroyComponent()">Destroy component</button>
+<button (click)="createComponentTwo()">create component</button>
+<div #container2>h</div>
+
+<div *ngFor="let item of items">
+  <div *ngIf="item.id">{{ item.name }}</div>
+</div>
+---2
+<ng-container *ngFor="let item of items">
+  <div *ngIf="item.id">{{ item.name }}</div>
+</ng-container>
+--3
+<ng-template [ngIf]="show">
+  Hello ng-template
+</ng-template>
+<ng-template #sShow>
+  con t
+</ng-template>

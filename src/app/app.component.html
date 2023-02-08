@@ -1,5 +1,5 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
+<!-- <div style="text-align:center">
   <h1>
     Welcome to {{ title }}!
   </h1>
@@ -17,4 +17,40 @@
     <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
   </li>
 </ul>
+<div class="container pt-3">
+  <h1>my first bootstrap page</h1>
+  <p>This is some text.</p>
+</div>
+<div class="container-fluid px-3 py-4 my-3 bg-dark text-white">
+  <h1>my first bootstrap page</h1>
+  <p>This is some text.</p>
+</div>
+<div class="container-sm my-3 bg-primary text-white">
+  <h1>my first bootstrap page</h1>
+  <p>This is some text.</p>
+</div> -->
+<a routerLink = "/">Home</a>
+<a routerLink = "/dynamic">Dynamic</a>
+<a routerLink = "/customer/trieu/info">info customer</a>
+<a routerLink = "/customer/trieu/login">login</a>
+<a routerLink = "/customer">user</a>
+<router-outlet></router-outlet>
 
+<app-child (newItemEvent)="addItem($event)"></app-child>
+<p>...{{evenEmitterValue}}...</p>
+----------------------------
+<app-dynamic-component></app-dynamic-component>
+
+<div class="container p-4 bg-primary">
+  <form [formGroup]="profileform" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="firstName" class="form-label">FirstName</label>
+      <input id="firstName" class="form-control" formControlName="firstName" />
+    </div>
+    <div>
+      <label for="lastName" class="form-label">LastName</label>
+      <input id="lastName" class="form-control" formControlName="lastName" />
+    </div>
+    <button type="submit" class="btn btn-secondary">Submit</button>
+  </form>
+</div>
